@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { FromAction, FromActionAsync } from './REACT_19/formActions/FromAction'
+import { TodoWidget } from './REACT_19/use/use_GetData'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      {/* Тест use для получения данных */}
+      {/* <TodoWidget /> */}
+
+      {/* Тест действия формы */}
+      <FromAction />
+
+      {/* Тест действия формы с хуком useFromStatus */}
+      {/* для полчения состояния загрузки асинхронной формы */}
+      <FromActionAsync />
+
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
